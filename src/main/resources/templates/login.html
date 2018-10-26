@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/Popt.js"></script>
+    <script type="text/javascript" src="js/city.json.js"></script>
+    <script type="text/javascript" src="js/citySet.js"></script>
+    <style type="text/css">
+        .tips{
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #666666;
+            margin: 15px 0 0 0;
+        }
+        .tips em {
+            color: #6C9DD9;
+        }
+        input[type="text"] {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            height: -webkit-calc(3em + 2px);
+            height: calc(3em + 2px);
+            margin: 0 0 1em;
+            padding: 1em;
+            border: 1px solid #cccccc;
+            border-radius: 1.5em;
+            background: #fff;
+            resize: none;
+            outline: none;
+        }
+        input[type="text"][required]:focus {
+            border-color: #00bafa;
+        }
+        input[type="text"][required]:focus + label[placeholder]:before {
+            color: #00bafa;
+        }
+        input[type="text"][required]:focus + label[placeholder]:before,
+        input[type="text"][required]:valid + label[placeholder]:before {
+            -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            -ms-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+        }
+        input[type="text"][required]:invalid + label[placeholder][alt]:before {
+            content: attr(alt);
+        }
+        input[type="text"][required] + label[placeholder] {
+            display: block;
+            pointer-events: none;
+            line-height: 2.3em;
+            margin-top: -webkit-calc(-3em - 2px);
+            margin-top: calc(-3em - 2px);
+            margin-bottom: -webkit-calc((3em - 1em) + 2px);
+            margin-bottom: calc((3em - 1em) + 2px);
+        }
+        input[type="text"][required] + label[placeholder]:before {
+            content: attr(placeholder);
+            display: inline-block;
+            margin: 0 -webkit-calc(1em + 2px);
+            margin: 0 calc(1em + 2px);
+            padding: 0 2px;
+            color: #898989;
+            white-space: nowrap;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+            background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            -webkit-background-size: 100% 5px;
+            background-size: 100% 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+<div style="position: relative;">
+    <img src="./images/login_bg.jpg" style="width:100%"/>
+    <!--<img src="./images/logo.jpg" style="position: absolute;top: .2rem;left: .3rem;    width: 7rem;height: 3.5rem;"/>-->
+    <div style="position:absolute;width: 100%;padding-left: .3rem;padding-right: .3rem;box-sizing: border-box;border-radius: .2rem;top: 45%;left: 0;right: 0;margin: auto;width: 100%;">
+        <form action="https://program.passlight.cn/infomation/sys/lenderLogin" method="post" target="nm_iframe">
+            <div>
+                <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
+                    <div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="tel" class="input input-big" name="telephone" id="telephone" placeholder="手机号" />
+                        </div>
+                    </div>
+                    <!--<div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="text" class="input input-big" name="userName" id="username" placeholder="姓名" />
+                            <span class="icon icon-user margin-small"></span>
+                        </div>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="text" class="input input-big" name="creditNumber" id="creditNumber" placeholder="芝麻分" />
+                            <span class="icon icon-user margin-small"></span>
+                        </div>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="text" class="input input-big" name="age" id="age" placeholder="年龄" />
+                            <span class="icon icon-user margin-small"></span>
+                        </div>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <div class="field">
+                            <input type="text" class="input input-big" name="captcha" id="captcha" placeholder="填写右侧的验证码" />
+                            <img id="captchaJpg" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;">
+                        </div>
+                    </div>-->
+                    <input type="hidden" id="uuid" name="uuid"/>
+                    <div class="form-group">
+                        <div class="field">
+                            <input type="number" class="input input-big" name="authCode" id="authCode" placeholder="填写短信验证码" style="width:55%;"/>
+                            <div id="sendAuthCode"  class="passcode" style="line-height:3rem;width: 40%;height: 100%;border-width: 0px;border-radius: 1.5rem;background: #0ae;cursor: pointer;font-family: Microsoft YaHei;color: white;font-size: 17px;vertical-align: center;">获取验证码</div>
+                        </div>
+                    </div>
+                    <div style="color:red;display:none" id="errorMsg">
+                    </div>
+                    <p class="tips" style="margin-top:0px;color:white;font-size:0.5rem;margin-left:1rem;">点击“登录”即视为同意<em id="protocal"><<贷款申请 服务协议>></em>
+                    </p>
+                </div>
+                <div style="padding-bottom:30px;padding-left:30px;padding-right:30px;">
+                    <input type="button" id="button" class="button button-block bg-main text-big input-big" style="border-radius:1.5rem;"value="登录" onclick="validate()">
+                    <!--<input type="button" id="button" class="button button-block bg-main text-big input-big" style="border-radius:1.5rem;"value="登录" onclick="validate()">-->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var $authCode;
+    var $timer;
+    var $time=60;
+    var $channelCode;
+    $(function(){
+        getChannelData();
+        initCaptcha();
+        initBtn();
+    })
+
+    function getChannelData(){
+        var _params=GetRequest();
+        if(_params && _params.channelCode){
+            $channelCode=_params.channelCode;
+        }
+    }
+    function initBtn(){
+        //$("#captchaJpg").on("click",function(){
+        //initCaptcha();
+        //})
+        $("#sendAuthCode").on("click",function(){
+            sendAuthCode();
+        });
+        $("#protocal").on("click",function(){
+            window.location.href='protocol.html';
+        });
+    }
+    function initCaptcha(){
+        var _uuid=get_uuid();
+        $("#uuid").val(_uuid);
+        $("#captchaJpg").attr("src","https://program.passlight.cn/infomation/captcha.jpg?uuid="+_uuid);
+    }
+    function validate(){
+        //$("#errorMsg").html("请输入正确的手机号");
+        var _telephone=$("#telephone").val();
+        var telReg = !!_telephone.match(/^(0|86|17951)?[1](3|5|6|7|8|4)[0-9]{9}$/);
+        if(!telReg){
+            $MessageBox.fail("提示","请输入正确的手机号");
+            return false;
+            //$("#errorMsg").css("display","block");
+            //return false;
+        }
+
+        // var _userName=$("#username").val()
+        // if(!_userName){
+        // 	$("#errorMsg").html("请输入名称");
+        // 	$("#errorMsg").css("display","block");
+        // 	return false;
+        // }
+
+        /*var _creditNumber=$("#creditNumber").val();
+        var creditNumberReg=!!_creditNumber.match(/^[1-9]{3}/);
+        if(!_creditNumber){
+            $("#errorMsg").html("请输入正确的芝麻分");
+            $("#errorMsg").css("display","block");
+            return false;
+        }
+        if(_creditNumber<=580){
+            $("#errorMsg").html("芝麻分太低不能注册");
+            $("#errorMsg").css("display","block");
+            return false;
+        }*/
+
+        // var _age=$("#age").val();
+        // var ageReg=!!_age.match(/^[1-9]{3}/);
+        // if(!_age || _age>42 || _age<23){
+        // 	$("#errorMsg").html("请输入正确的年龄");
+        // 	$("#errorMsg").css("display","block");
+        // 	return false;
+        // }
+
+        /*var _captcha=$("#captcha").val();
+        if(!_captcha){
+            $("#errorMsg").html("请输入验证码");
+            $("#errorMsg").css("display","block");
+            return false;
+        }*/
+        var _authCode=$("#authCode").val();
+        if(!_authCode && _authCode!==$authCode){
+            $MessageBox.fail("提示","请输入正确的验证码");
+            return false;
+        }
+
+        window.location.href="client_request.html";
+        $.ajax({
+            url: "https://program.passlight.cn/infomation/sys/lenderLogin",
+            type: "post",
+            data: JSON.stringify({
+                telephone:_telephone,
+                uuid:$("#uuid").val(),
+                authCode:_authCode,
+                channelCode:$channelCode
+                // userName:_userName,
+                // age:_age
+            }),
+            // contentType: "application/json",
+            // success: function (result) {
+            //     if(result.code===0){
+            //         localStorage.setItem("token",result.token);
+            //         localStorage.setItem("telephone",_telephone);
+            //         window.location.href="client_request.html";
+            //     }
+            // },
+            fail: function (result) {
+                console.log(result);
+            }
+
+        });
+        return true;
+    }
+    function sendAuthCode(){
+        //$("#errorMsg").css("display","none");
+        var _uuid=$("#uuid").val();
+        var _captcha=$("#captcha").val();
+        var _userName=$("#telephone").val()
+        var telReg = !!_userName.match(/^(0|86|17951)?[1](3|5|6|7|8|4)[0-9]{9}$/);
+        if(!telReg){
+            $MessageBox.fail("提示","请输入正确的手机号");
+            return false;
+        }
+        if("获取验证码"!=$("#sendAuthCode").html() && "重新获取"!=$("#sendAuthCode").html()){
+            return false;
+        }
+        $time=60;
+        $.get("https://program.passlight.cn/infomation/sys/checkCaptcha?uuid="+_uuid+"&userName="+_userName+"&captcha="+_captcha,function(data,status){
+            if(data.code===500){
+                $("#errorMsg").html(data.msg);
+                $("#errorMsg").css("display","block");
+                initCaptcha();
+            }
+            $timer=setInterval(function(){
+                $("#sendAuthCode").css("background","#8A8A8A");
+                $time--;
+                if($time>0){
+                    $("#sendAuthCode").html($time+"秒后重获");
+                }else{
+                    clearInterval($timer);
+                    $("#sendAuthCode").html("重新获取");
+                    $("#sendAuthCode").css("background","#0ae");
+                }
+            },1000);
+            $authCode=data.msg;
+        });
+
+    }
+    function get_uuid(){
+        var s = [];
+        var 	hexDigits = "0123456789abcdef";
+        for (var i = 0; i < 36; i++) {
+            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+        }
+        s[14] = "4";
+        s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);
+        s[8] = s[13] = s[18] = s[23] = "-";
+
+        var uuid = s.join("");
+        return uuid;
+    }
+
+
+
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+</script>
+</html>

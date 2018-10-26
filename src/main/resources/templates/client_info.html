@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <title>我的</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+<div class="user_top">
+    <div class="imsg">
+        <img src="images/us2.png">
+    </div>
+    <div class="spans" id="telephoneDiv">
+        130XXXX8888
+    </div>
+</div>
+<!-- <div class="main3">
+       <ul>
+             <a href="#"><li class="zd">
+                   我的账单
+             </li></a>
+             <a href="#"><li class="yhk">
+                   我的银行卡
+             </li></a>
+             <div class="clr"></div>
+       </ul>
+</div> -->
+
+<div class="main4">
+    <ul>
+        <li class="one" onclick="logout()">
+            <a href="#">
+                <b class="ri">></b>
+                退出
+            </a>
+        </li>
+        <!--                  <li class="two"><a href="#">
+                                <b class="ri">></b>
+                                设置
+                         </a></li> -->
+    </ul>
+</div>
+<div class="foot">
+    <ul>
+        <li class="one">
+            <a href="client_request.html">借款</a>
+        </li>
+        <li class="three hover">
+            <a href="#">我的</a>
+        </li>
+    </ul>
+</div>
+
+<div class="kf">
+    <a href="#"><img src="images/kf.png"></a>
+</div>
+</body>
+<script type="text/javascript">
+    var $telephone;
+    $(function(){
+        validate();
+    });
+    function validate(){
+        var _token=localStorage.getItem("token");
+        var _telephone=localStorage.getItem("telephone");
+        if(!_token){
+            window.location.href="login_simple.html";
+            return;
+        }
+        $("#telephoneDiv").html(_telephone);
+    }
+    function logout(){
+        if(window.confirm("确认退出?")){
+            localStorage.clear();
+            window.location.href="login_simple.html";
+        }else{
+            return false;
+        }
+    }
+</script>
+</html>

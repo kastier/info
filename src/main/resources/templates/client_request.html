@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <title>首页</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles2.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
+    <style type="text/css">
+        .linkBtn{ width:85%; margin:10px auto; display:block; line-height:45px; border-radius:200px; background:linear-gradient(180deg, #fa7551, #fa5551); text-align:center; color:#fff; text-decoration:none;}
+
+    </style>
+</head>
+
+<body>
+<div class="swiper-container" style="height:160px;">
+    <!--<div class="swiper-wrapper">
+      <div class="swiper-slide">
+       <a href="#"></a>
+     </div>
+   </div>-->
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+    <img src="images/banner.png" style="height:160px;">
+</div>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+
+
+<div class="ggao">
+    <div class="ggbox">
+        <ul>
+            <li><span>最新消息</span>159******** 成功借款5000元</li>
+            <li><span>最新消息</span>158******** 成功借款3000元</li>
+            <li><span>最新消息</span>151******** 成功借款10000元</li>
+            <li><span>最新消息</span>188******** 成功借款8000元</li>
+            <li><span>最新消息</span>137******** 成功借款4000元</li>
+            <li><span>最新消息</span>176******** 成功借款5000元</li>
+            <li><span>最新消息</span>152******** 成功借款3000元</li>
+            <li><span>最新消息</span>139******** 成功借款8000元</li>
+            <li><span>最新消息</span>156******** 成功借款6000元</li>
+            <li><span>最新消息</span>133******** 成功借款7000元</li>
+            <!-- <li><span>快讯</span></li> -->
+        </ul>
+    </div>
+</div>
+
+<!--     <div class="main1">
+             <Span>我的账单</Span>
+             <div class="main_le le">
+                     <b>0</b>
+                     <p>30天内应还</p>
+             </div>
+             <div class="main_ri le">
+                    <b>20000</b>
+                     <p>可用额度</p>
+             </div>
+             <div class="clr"></div>
+           </div> -->
+
+<div class="main2">
+    <span class="firstSpan" style="font-size:1.5rem;margin-bottom:0px;">我要借款</span>
+    <!--<b class="btarget" id="lendMoney">2000元</b>-->
+    <div class="Preview" style="margin:0px 0px 0px 12%;">
+        <div class="GaugeMeter" id="PreviewGaugeMeter_3" data-percent="100" data-text="<font style='color:red;font-size:20px;letter-spacing:-1px'>最高可借贷</font>" data-size="250" data-theme="Green-Red" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1"  data-width="15" data-label="200,000" data-style="Arch" data-label-size="30px" data-label_color="black"></div>
+    </div>
+    <div style="margin-top:13.2rem;margin-left:4.4rem;position:absolute;">
+        <span class="imgSpan">快速认证</span>
+        <span class="imgSpan2">急速放款</span>
+    </div>
+</div>
+<a class="linkBtn" href="#" onclick="return register();">立即申请</a>
+<div style="height:200px;">
+</div>
+
+
+
+<div class="foot">
+    <ul>
+        <li class="one hover">
+            <a href="client_request.html">借款</a>
+        </li>
+        <li class="three">
+            <a href="client_info.html">我的</a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var $telephone;
+    var $yysTaskId;
+    var $flag=false;
+    var $saveOrder=0;
+    $(function(){
+        $(".GaugeMeter").gaugeMeter();
+        var _params=GetRequest();
+        if(_params && _params.task_id){
+            $yysTaskId=_params.task_id;
+        }
+        if(_params && _params.saveOrder){
+            $saveOrder=_params.saveOrder;
+        }
+        if($saveOrder===1){
+            register();
+        }
+
+        validate();
+        updateYysTaskId();
+        if(!$yysTaskId){
+            checkAuth();
+        }
+        styler();
+    })
+    function styler(){
+        $(".GaugeMeter b").css("font-size","30px");
+        $(".GaugeMeter b").css("font-size","30px");
+        $(".GaugeMeter b").css("font-weight","bolder");
+    }
+
+    function register(){
+        $MessageBox.success("恭喜","恭喜您申请成功,请保持电话畅通,我们将在24小时内与您联系!",false);
+        // if($flag || $saveOrder===1){
+        //     $.ajax({
+        //         url: "https://program.passlight.cn/infomation/bussiness/order/save",
+        //         type: "post",
+        //         data: JSON.stringify({
+        //             telephone:$telephone,
+        //             lendmoney:0
+        //         }),
+        //         contentType: "application/json",
+        //         success: function (result) {
+        //             if(result.code===0){
+        //                 $MessageBox.success("恭喜","恭喜您申请成功,请保持电话畅通,我们将在24小时内与您联系!",false);
+        //             }else{
+        //                 var _flag=result.pass;
+        //                 if(!_flag){
+        //                     window.location.href='luru.html';
+        //                 }
+        //                 $MessageBox.fail("抱歉","申请失败!");
+        //             }
+        //         },
+        //         fail: function (result) {
+        //             console.log(result);
+        //         }
+        //
+        //     });
+        // }else{
+        //     window.location.href='luru.html';
+        // }
+
+    }
+    function updateYysTaskId(){
+        // var _telephone=localStorage.getItem("telephone");
+        // $telephone=_telephone;
+        // if($yysTaskId){
+        //     //存yys_task_id
+        //     $.ajax({
+        //         url: "https://program.passlight.cn/infomation/bussiness/lender/insertYysTaskId",
+        //         type: "post",
+        //         data: {
+        //             telephone:$telephone,
+        //             yysTaskId:$yysTaskId
+        //         },
+        //         success: function (result) {
+        //             if(result.code===0){
+        //                 $flag=true;
+        //                 register();
+        //                 //alert("认证成功！请等待审核员联系");
+        //             }else{
+        //                 $flag=false;
+        //                 $MessageBox.fail("抱歉","认证失败!");
+        //                 // alert("认证失败!");
+        //             }
+        //         },
+        //         fail: function (result) {
+        //             console.log(result);
+        //         }
+        //     });
+        // }else{
+        //     //不做任何操作
+        // }
+    }
+    function validate(){
+        //var _token=localStorage.getItem("token");
+
+    }
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    function checkAuth(){
+        if($telephone){
+            $.get('https://program.passlight.cn/infomation/bussiness/lender/checkAuth/'+$telephone,function(data,code){
+                if(data.code===0){
+                    $flag=data.pass;
+                    if(!$flag){
+                        $MessageBox.success("溫馨提示","马上认证，急速放款",false,function(){
+                            window.location.href="luru.html";
+                        })
+                    }
+                }else{
+                    $MessageBox.fail("抱歉",data.msg);
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>
