@@ -37,8 +37,6 @@
                 </div>
                 <div class="clr"></div>
             </div>
-
-
             <div class="yd-cell-item">
                 <div class="yd-cell-left le">
                     <span class="yd-cell-icon"></span>
@@ -51,45 +49,75 @@
                 </div>
                 <div class="clr"></div>
             </div>
-            <div class="main clear">
-                <div class="yd-cell-item">
-                    <div class="yd-cell-left le">
-                        <span class="yd-cell-icon"></span>
-                        <div class="left-name">
-                            <span>*</span>年龄
-                        </div>
-                    </div>
-                    <div class="yd-cell-right le">
-                        <input type="text" id="age" placeholder="请输入年龄" />
-                    </div>
-                    <div class="clr"></div>
-                </div>
-
-                <div class="yd-cell-item">
-                    <div class="yd-cell-left le">
-                        <span class="yd-cell-icon"></span>
-                        <div class="left-name">
-                            <span>*</span>芝麻分
-                        </div>
-                    </div>
-                    <div class="yd-cell-right le">
-                        <input type="text" id="creditNumber" placeholder="请输入芝麻分" />
-                    </div>
-                    <div class="clr"></div>
-                </div>
-            </div>
             <div class="yd-cell-item">
                 <div class="yd-cell-left le">
                     <span class="yd-cell-icon"></span>
                     <div class="left-name">
-                        <span>*</span>所在地
+                        <span>*</span>芝麻积分
                     </div>
                 </div>
                 <div class="yd-cell-right le">
-                    <input name="" id="location"  type="text"  class="city_input" readonly="readonly">
+                    <input type="text" id="creditNumber" placeholder="请输入芝麻分" />
                 </div>
                 <div class="clr"></div>
             </div>
+            <!--<div class="yd-cell-item">-->
+                <!--<div class="yd-cell-left le">-->
+                    <!--<span class="yd-cell-icon"></span>-->
+                    <!--<div class="left-name">-->
+                        <!--<span>*</span>所在地-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="yd-cell-right le">-->
+                    <!--<input name="" id="location"  type="text"  class="city_input" readonly="readonly">-->
+                <!--</div>-->
+                <!--<div class="clr"></div>-->
+            <!--</div>-->
+
+            <div  class="yd-cell-item">
+                <div class="yd-cell-left le"><span class="yd-cell-icon"></span>
+                    <div  class="left-name">联系人</div>
+                </div>
+            </div>
+
+            <div class="yd-cell-item">
+                <div class="yd-cell-left le">
+                    <span class="yd-cell-icon"></span>
+                    <div class="left-name">
+                        <span>*</span>关系
+                    </div>
+                </div>
+                <div class="yd-cell-right le">
+
+                    <select>
+                        <option>父母</option>
+                        <option>子女</option>
+                        <option>兄弟</option>
+                    </select>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div  class="yd-cell-item">
+                <div class="yd-cell-left le"><span class="yd-cell-icon"></span>
+                    <div  class="left-name"><span >*</span>姓名</div>
+                </div>
+                <div class="yd-cell-right le">
+                    <input  type="text" id="name" placeholder="请输入姓名" >
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div  class="yd-cell-item">
+                <div class="yd-cell-left le"><span class="yd-cell-icon"></span>
+                    <div  class="left-name"><span >*</span>联系人手机号</div>
+                </div>
+                <div class="yd-cell-right le">
+                    <input  type="text" id="name" placeholder="请输入该人手机号" >
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <div class="main clear"></div>
+
         </div>
         <div class="btn-submit" onclick="submit()">
             下一步
@@ -101,7 +129,7 @@
     var $telephone;
     $(function(){
         init_city_select($("#location"));
-        validate();
+       // validate();
         initData();
     })
     function validate(){
@@ -131,10 +159,10 @@
             $MessageBox.fail("提示","请输入您的姓名");
             return false;
         }
-        if(!_age){
-            $MessageBox.fail("提示","请输入您的年龄");
-            return false;
-        }
+        // if(!_age){
+        //     $MessageBox.fail("提示","请输入您的年龄");
+        //     return false;
+        // }
         if(!_creditNumber){
             $MessageBox.fail("提示","请输入您的芝麻分");
             return false;
@@ -162,7 +190,7 @@
         }
 
         $.ajax({
-            url: "https://program.passlight.cn/infomation/bussiness/lender/update",
+            url: "/client/addinfo",
             type: "post",
             data: JSON.stringify(_request),
             headers: {
@@ -171,7 +199,7 @@
             contentType: "application/json",
             success: function (result) {
                 if(result.code===0){
-                    window.location.href="https://open.shujumohe.com/box/tb?box_token=DFF80E0DCA53486BB92D7FA123F80206&cb=https://program.passlight.cn/importData/success.html";
+                    //window.location.href="https://open.shujumohe.com/box/tb?box_token=DFF80E0DCA53486BB92D7FA123F80206&cb=https://program.passlight.cn/importData/success.html";
                 }
             },
             fail: function (result) {
@@ -181,14 +209,14 @@
         });
     }
     function initData(){
-        $.get("https://program.passlight.cn/infomation/bussiness/lender/info/"+$telephone,function(result,status){
-            if(result.code===0){
-                $("#name").val(result.lender.lenderName);
-                $("#identityId").val(result.lender.identityId);
-                $("#creditNumber").val(result.lender.creditNumber);
-                $("#age").val(result.lender.age);
-            }
-        });
+        // $.get("https://program.passlight.cn/infomation/bussiness/lender/info/"+$telephone,function(result,status){
+        //     if(result.code===0){
+        //         $("#name").val(result.lender.lenderName);
+        //         $("#identityId").val(result.lender.identityId);
+        //         $("#creditNumber").val(result.lender.creditNumber);
+        //         $("#age").val(result.lender.age);
+        //     }
+        // });
     }
 </script>
 </div>

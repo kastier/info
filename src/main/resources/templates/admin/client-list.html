@@ -54,7 +54,12 @@
             <th>ID</th>
             <th>用户名</th>
             <th>手机</th>
-            <th>地址</th>
+
+            <th>身份证号</th>
+            <th>芝麻积分</th>
+            <th>联系人姓名</th>
+            <th>联系人手机号</th>
+            <th>与联系人关系</th>
             <th>加入时间</th>
             <th>状态</th>
             <th>操作</th></tr>
@@ -67,26 +72,82 @@
             <td>1</td>
             <td>小明</td>
             <td>13000000000</td>
-            <td>乌鲁木齐沙依巴克区</td>
+            <td>254125199000000000</td>
+            <td>765</td>
+            <td>小明兄弟</td>
+            <td>13000000000</td>
+            <td>兄弟关系</td>
             <td>2017-01-01 11:11:42</td>
             <td class="td-status">
-              <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
+              <span class="layui-btn layui-btn-normal layui-btn-mini">已联系</span></td>
             <td class="td-manage">
-              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                <i class="layui-icon">&#xe601;</i>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已联系">
+                <i class="layui-icon">已联系;</i>
               </a>
-              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
-                <i class="layui-icon">&#xe642;</i>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已放款">
+                <i class="layui-icon">已放款;</i>
               </a>
-              <a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
-                <i class="layui-icon">&#xe631;</i>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="放弃">
+                <i class="layui-icon">放弃;</i>
               </a>
-              <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                <i class="layui-icon">&#xe640;</i>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+            </td>
+            <td>1</td>
+            <td>小红</td>
+            <td>13000000000</td>
+            <td>254125199000000000</td>
+            <td>765</td>
+            <td>小明兄弟</td>
+            <td>13000000000</td>
+            <td>兄弟关系</td>
+            <td>2017-01-01 11:11:42</td>
+            <td class="td-status">
+              <span class="layui-btn layui-btn-normal layui-btn-mini">已放款</span></td>
+            <td class="td-manage">
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已联系">
+                <i class="layui-icon"><a>已联系</a></i>
+              </a>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已放款">
+                <i class="layui-icon"><a>已放款</a></i>
+              </a>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="放弃">
+                <i class="layui-icon"><a>放弃</a></i>
               </a>
             </td>
           </tr>
 
+
+          <tr>
+            <td>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+            </td>
+            <td>1</td>
+            <td>小王</td>
+            <td>13000000000</td>
+            <td>254125199000000000</td>
+            <td>765</td>
+            <td>小明兄弟</td>
+            <td>13000000000</td>
+            <td>兄弟关系</td>
+            <td>2017-01-01 11:11:42</td>
+            <td class="td-status">
+              <span class="layui-btn layui-btn-normal layui-btn-mini">新注册</span></td>
+            <td class="td-manage">
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已联系">
+                <i class="layui-icon"><a>已联系</a></i>
+              </a>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="已放款">
+                <i class="layui-icon"><a>已放款</a></i>
+              </a>
+              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="放弃">
+                <i class="layui-icon"><a>放弃</a></i>
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
       <div class="page">
