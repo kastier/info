@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://123.206.72.62:3306/infosys?useSSL=false&allowMultiQueries=true
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+      host: 123.206.72.62
+      port: 6379
+      pool:
+        max-active: 10
+  cloud:
+    inetutils:
+      ignoredInterfaces: # 排除的网卡名正则
+        - VirtualBox.*
+        - Software.*
+
+logging:
+  level:
+    root: info

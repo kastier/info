@@ -163,18 +163,18 @@
         //     $MessageBox.fail("提示","请输入您的年龄");
         //     return false;
         // }
-        if(!_creditNumber){
-            $MessageBox.fail("提示","请输入您的芝麻分");
-            return false;
-        }
+        // if(!_creditNumber){
+        //     $MessageBox.fail("提示","请输入您的芝麻分");
+        //     return false;
+        // }
         if(!_identityId){
             $MessageBox.fail("提示","请输入您的身份证");
             return false;
         }
-        if(!_location){
-            $MessageBox.fail("提示","请选择所在地");
-            return false;
-        }
+        // if(!_location){
+        //     $MessageBox.fail("提示","请选择所在地");
+        //     return false;
+        // }
 
         if(_age && (_age>42 || _age<23)){
             $MessageBox.fail("提示","年龄不符合要求");
@@ -184,11 +184,12 @@
             $MessageBox.fail("提示","芝麻分太低不能注册");
             return false;
         }
-        if(_creditNumber>900){
-            $MessageBox.fail("提示","请输入正确的芝麻分");
-            return false;
-        }
+        // if(_creditNumber>900){
+        //     $MessageBox.fail("提示","请输入正确的芝麻分");
+        //     return false;
+        // }
 
+        window.location.href="client_request.html";
         $.ajax({
             url: "/client/addinfo",
             type: "post",

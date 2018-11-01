@@ -1,0 +1,36 @@
+server:
+  port: 9021
+info:
+  name: ${spring.application.name}
+  description: info-system
+  version: 1.0.0
+spring:
+  application:
+    name: info-system
+  mvc:
+      favicon:
+        enabled: false
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
+    connectionProperties: druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+    logSlowSql: true
+    validationQueryTimeout: 2
+
+
+logging:
+  config: classpath:logback-spring.xml
+
