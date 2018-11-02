@@ -17,8 +17,7 @@ public class ClientService  implements IClientService
 	
 	public Integer addClientPhoneNumber (String phoneNumber)
 	{
-		clientRepository.addClientPhoneNumber (phoneNumber);
-		return 0;
+		return clientRepository.addClientPhoneNumber (phoneNumber);
 	}
 	public Integer setClientInfo(ClientInfo clientInfo)
 	{

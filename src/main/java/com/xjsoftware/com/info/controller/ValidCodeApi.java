@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping(value = "/validcode/api")
@@ -53,7 +54,7 @@ public class ValidCodeApi {
 		if(result)
 		{
 			Integer id=iClientService.addClientPhoneNumber (phoneNumber);
-			CookieHelper.writeCookie (res,"csec","done");
+			CookieHelper.writeCookie (res,"csec",id.toString ());
 			ApiResult apiResult=new ApiResult ();
 			apiResult.setData ("success");
 			apiResult.setCode (1);

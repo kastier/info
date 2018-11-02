@@ -12,10 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping(value = "/client")
 public class ClientController {
 	
+	org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
+	
 	@RequestMapping(value = "/index")
 	public String Index(HttpServletRequest request)
 	{
 		String clientId=CookieHelper.getCookie (request,"csess");
+		
+		logger.info (clientId.toString ());
 		
 		Integer status=0;
 		if(status==0)

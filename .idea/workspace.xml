@@ -2,56 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2218f628-e08f-47a0-b07b-9aea4f38acee" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/volobj/ValidCodeInfo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/volobj/enums/ValidCodeSentStatusEnum.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/info.iml" afterPath="$PROJECT_DIR$/info.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/InfoApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/InfoApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/aop/ControllerInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/aop/ControllerInterceptor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/ClientInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/ClientInfo.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientApi.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CacheKeys.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CacheKeys.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/IPHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/IPHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IAdminSercvice.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IValidCodeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/AdminSercvice.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ValidCodeServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/volobj/ApiResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/volobj/ApiResult.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/base.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/cityLayout.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/css.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/global.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/styles2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/swiper.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/banner.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/kf.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/login_bg.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/money.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/pc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/us2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/city.json.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/citySet.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/cityselect.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/dialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/jquery-3.1.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/jquery.AshAlom.gaugeMeter-2.0.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/swiper.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/js/utils.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,6 +22,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ClientController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientApi.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,38 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="215" column="73" lean-forward="false" selection-start-line="215" selection-start-column="73" selection-end-line="215" selection-end-column="73" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="202">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,41 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidCodeServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ValidCodeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="198" column="36" lean-forward="false" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client_info.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client_info.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="10" column="75" lean-forward="false" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
+            <state relative-caret-position="133">
+              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ClientInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/ClientInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="82" lean-forward="false" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+            <state relative-caret-position="218">
+              <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -163,11 +86,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ValidCodeApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+            <state relative-caret-position="287">
+              <caret line="55" column="47" lean-forward="false" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IClientService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -186,9 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UserInfoServiceImpl</find>
-      <find>MethodSignature</find>
-      <find>druid</find>
       <find>ProceedingJoinPoint</find>
       <find>Author</find>
       <find>redis</find>
@@ -216,6 +166,9 @@
       <find>validate</find>
       <find>validCodeInfo is null</find>
       <find>phoneNumber</find>
+      <find>setid</find>
+      <find>set</find>
+      <find>addClientPhoneNumber</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,19 +221,19 @@
         <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/volobj/ValidCodeInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/config/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/InfoApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ValidCodeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java" />
       </list>
     </option>
   </component>
@@ -593,7 +546,7 @@
       <updated>1540478283957</updated>
       <workItem from="1540478294242" duration="36259000" />
       <workItem from="1541091428158" duration="7660000" />
-      <workItem from="1541120540397" duration="21850000" />
+      <workItem from="1541120540397" duration="24092000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1540557886038</created>
@@ -630,11 +583,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541097421959</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feature(info):完成驗證碼">
+      <created>1541165166453</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541165166453</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65769000" />
+    <option name="totallyTimeSpent" value="68011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="98" width="1936" height="1096" extended-state="6" />
@@ -652,12 +612,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -685,7 +645,8 @@
     <MESSAGE value="feature(info):add company info management page" />
     <MESSAGE value="feature(info):修改商家逻辑" />
     <MESSAGE value="feature(info):添加依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(info):添加依赖" />
+    <MESSAGE value="feature(info):完成驗證碼" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(info):完成驗證碼" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -992,14 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/ClientInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1095,24 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/InfoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1121,54 +1056,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="84" lean-forward="false" selection-start-line="3" selection-start-column="84" selection-end-line="3" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1197,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -1218,21 +1101,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/manager/CookieHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        <state relative-caret-position="95">
+          <caret line="8" column="96" lean-forward="false" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ClientApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/IClientService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="10" column="75" lean-forward="false" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/controller/ValidCodeApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="55" column="47" lean-forward="false" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/ClientInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/dao/ClientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/service/impl/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xjsoftware/com/info/client/repo/ClientRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

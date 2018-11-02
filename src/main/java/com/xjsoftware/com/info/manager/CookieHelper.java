@@ -6,13 +6,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 
 public class CookieHelper {
+	static  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(CookieHelper.class);
 	public static String getCookie(HttpServletRequest request,String cookieName){
+		
 		
 		Cookie[] cookies =  request.getCookies();
 		if(cookies != null){
 			for(Cookie cookie : cookies){
 				if(cookie.getName().equals(cookieName)){
 					String value= cookie.getValue();
+					logger.info ("cookie value:"+value);
 					return decodeCookie (value);
 				}
 			}
@@ -22,7 +25,11 @@ public class CookieHelper {
 	}
 	
 	public static void writeCookie(HttpServletResponse response, String cookieName,String value){
+		
+		logger.info ("cookie value:"+value);
+		
 		value=encodeCookie (value);
+		
 		Cookie cookie = new Cookie(cookieName,value);
 		cookie.setPath("/");
 		cookie.setMaxAge(3600);

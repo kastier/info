@@ -2,14 +2,16 @@ package com.xjsoftware.com.info.client.repo.dao;
 
 import com.xjsoftware.com.info.client.ClientInfo;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
 public interface ClientDao {
-    @Insert ({"INSERT INTO `infosys`.`client_info`(`phoneNumber`) VALUES (#{phoneNumber});"})
-    Integer addClientPhoneNumber(@Param (value = "phoneNumber") String phoneNumber);
+    @Insert ({"INSERT INTO `infosys`.`clientInfo` (`phoneNumber`) VALUES (#{clientInfo.phoneNumber});"})
+    @Options(useGeneratedKeys = true, keyProperty = "clientInfo.id")
+    Integer addClientPhoneNumber(@Param ("clientInfo") ClientInfo clientInfo);
 
     Integer updateClient(ClientInfo clientInfo);
 

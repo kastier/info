@@ -17,7 +17,10 @@ public class ClientRepository {
     }
     public Integer addClientPhoneNumber (String phoneNumber)
     {
-        return clientDao.addClientPhoneNumber (phoneNumber);
+        ClientInfo clientInfo=new ClientInfo ();
+        clientInfo.setPhoneNumber (phoneNumber);
+         clientDao.addClientPhoneNumber (clientInfo);
+         return clientInfo.getId ();
     }
     
     
