@@ -1,4 +1,8 @@
 package com.xjsoftware.com.info.service;
 
-public class IClientService {
+import com.xjsoftware.com.info.client.ClientInfo;
+
+public interface IClientService {
+	Integer addClientPhoneNumber (String phoneNumber);
+	Integer setClientInfo(ClientInfo clientInfo);
 }

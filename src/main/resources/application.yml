@@ -5,6 +5,11 @@ info:
   description: info-system
   version: 1.0.0
 spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
   application:
     name: info-system
   mvc:
@@ -33,4 +38,3 @@ spring:
 
 logging:
   config: classpath:logback-spring.xml
-

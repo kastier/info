@@ -6,7 +6,7 @@ import com.xjsoftware.com.info.volobj.ApiResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping(value = "client/api")
+@RequestMapping(value = "api/client")
 @RestController
 public class ClientApi {
 

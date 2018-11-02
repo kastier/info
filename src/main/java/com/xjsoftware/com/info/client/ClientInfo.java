@@ -1,5 +1,7 @@
 package com.xjsoftware.com.info.client;
 
+import java.time.LocalDateTime;
+
 public class ClientInfo {
 
 
@@ -14,6 +16,26 @@ public class ClientInfo {
     private String relativeName;
     private String relativePhone;
     private Integer relativeType;
+    
+    public LocalDateTime getTime() {
+        return time;
+    }
+    
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
+    
+    private LocalDateTime time;
+    
+    public Integer getStatus() {
+        return status;
+    }
+    
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+    
+    private Integer status;
 
     public Integer getId() {
         return id;
