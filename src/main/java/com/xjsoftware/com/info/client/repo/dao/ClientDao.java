@@ -1,38 +1,52 @@
 package com.xjsoftware.com.info.client.repo.dao;
 
 import com.xjsoftware.com.info.client.ClientInfo;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
 public interface ClientDao {
-    @Insert ({"INSERT INTO `infosys`.`clientInfo` (`phoneNumber`) VALUES (#{clientInfo.phoneNumber});"})
+    @Insert ({"INSERT INTO `infosys`.`clientInfo` (`phoneNumber`,`status`) VALUES (#{clientInfo.phoneNumber},#{clientInfo.status.value});"})
     @Options(useGeneratedKeys = true, keyProperty = "clientInfo.id")
     Integer addClientPhoneNumber(@Param ("clientInfo") ClientInfo clientInfo);
 
-    Integer updateClient(ClientInfo clientInfo);
 
-    @Select ({
-                    "SELECT" ,
-                            "client_info.id," ,
-                            "client_info.phoneNumber," ,
-                            "client_info.`name`," ,
-                            "client_info.age," ,
-                            "client_info.idCode," ,
-                            "client_info.creaditScore," ,
-                            "client_info.job," ,
-                            "client_info.relativeName," ,
-                            "client_info.relativePhone," ,
-                            "client_info.relativeType," ,
-                            "client_info.time," ,
-                            "client_info.`status`" ,
+    @Update({""})
+    ClientInfo updateClientByPhoneNumber(ClientInfo clientInfo);
+
+    @Select ({"SELECT" ,
+                            "clientInfo.id," ,
+                            "clientInfo.phoneNumber," ,
+                            "clientInfo.`name`," ,
+                            "clientInfo.age," ,
+                            "clientInfo.idCode," ,
+                            "clientInfo.creaditScore," ,
+                            "clientInfo.job," ,
+                            "clientInfo.relativeName," ,
+                            "clientInfo.relativePhone," ,
+                            "clientInfo.relativeType," ,
+                            "clientInfo.time," ,
+                            "clientInfo.`status`" ,
                             "FROM" ,
-                            "client_info by phoneNumber where phoneNumber =#{phoneNumber}"
-            })
+                            "clientInfo by phoneNumber where phoneNumber =#{phoneNumber}"})
     ClientInfo  getClientByPhoneNumber(@Param (value = "phoneNumber") String phoneNumber);
+
+    @Select ({"SELECT" ,
+            "clientInfo.id," ,
+            "clientInfo.phoneNumber," ,
+            "clientInfo.`name`," ,
+            "clientInfo.age," ,
+            "clientInfo.idCode," ,
+            "clientInfo.creaditScore," ,
+            "clientInfo.job," ,
+            "clientInfo.relativeName," ,
+            "clientInfo.relativePhone," ,
+            "clientInfo.relativeType," ,
+            "clientInfo.time," ,
+            "clientInfo.`status`" ,
+            "FROM" ,
+            "clientInfo where id =#{id}"})
+    ClientInfo  getClientById(@Param ("id") Integer id);
 
     List<ClientInfo > getClientInfosByPage(Integer pageSize, Integer pageIndex);
 }

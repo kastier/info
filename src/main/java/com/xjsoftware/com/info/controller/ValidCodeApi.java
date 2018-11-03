@@ -1,16 +1,21 @@
 package com.xjsoftware.com.info.controller;
 
 
+import com.xjsoftware.com.info.client.ClientInfo;
+import com.xjsoftware.com.info.client.enums.StatusEnum;
 import com.xjsoftware.com.info.manager.CookieHelper;
+import com.xjsoftware.com.info.manager.CookieSet;
 import com.xjsoftware.com.info.service.IClientService;
 import com.xjsoftware.com.info.service.IValidCodeService;
 import com.xjsoftware.com.info.volobj.ApiResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
 
@@ -47,22 +52,32 @@ public class ValidCodeApi {
 	@Autowired
 	IClientService iClientService;
 	
-	@RequestMapping(value = "check",method = RequestMethod.GET)
-	public ApiResult checkValidCode(@RequestParam String phoneNumber,@RequestParam String validCode,HttpServletResponse res)
+	@RequestMapping(value = "/check",method = RequestMethod.GET)
+	public ApiResult checkValidCode(@RequestParam String phoneNumber, @RequestParam String validCode)
 	{
+		ApiResult apiResult=new ApiResult ();
 		Boolean result=validCodeService.isValidCodeCorrect (phoneNumber,validCode);
 		if(result)
 		{
-			Integer id=iClientService.addClientPhoneNumber (phoneNumber);
-			CookieHelper.writeCookie (res,"csec",id.toString ());
-			ApiResult apiResult=new ApiResult ();
-			apiResult.setData ("success");
+			ClientInfo clientInfo=iClientService.getClientInfoByPhone(phoneNumber);
+
+			Integer id=0;
+			if(clientInfo==null||clientInfo.getId()<=0)
+			{
+				logger.info("new user");
+				id=iClientService.addClientPhoneNumber (phoneNumber);
+			}
+			else {
+				id=clientInfo.getId();
+			}
+			apiResult.setData (id);
 			apiResult.setCode (1);
 			return apiResult;
 		}
-		ApiResult apiResult=new ApiResult ();
-		apiResult.setCode (0);
-		apiResult.setData ("faile");
-		return apiResult;
+		else {
+			apiResult.setCode(-1);
+			apiResult.setMsg("请输入正确的验证码");
+			return apiResult;
+		}
 	}
 }

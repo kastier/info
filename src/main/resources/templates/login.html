@@ -220,8 +220,10 @@
                 //initCaptcha();
             }
             console.log(data);
+            window.location.href="index?id="+data.data;
         });
-        return true;
+       // return true;
+
     }
     function sendAuthCode(){
         //$("#errorMsg").css("display","none");

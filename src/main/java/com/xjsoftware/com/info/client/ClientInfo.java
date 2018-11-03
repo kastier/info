@@ -1,5 +1,7 @@
 package com.xjsoftware.com.info.client;
 
+import com.xjsoftware.com.info.client.enums.StatusEnum;
+
 import java.time.LocalDateTime;
 
 public class ClientInfo {
@@ -15,27 +17,17 @@ public class ClientInfo {
     private String job;
     private String relativeName;
     private String relativePhone;
-    private Integer relativeType;
-    
-    public LocalDateTime getTime() {
-        return time;
+
+    public String getRelativeType() {
+        return relativeType;
     }
-    
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+
+    public void setRelativeType(String relativeType) {
+        this.relativeType = relativeType;
     }
-    
+
+    private String relativeType;
     private LocalDateTime time;
-    
-    public Integer getStatus() {
-        return status;
-    }
-    
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-    
-    private Integer status;
 
     public Integer getId() {
         return id;
@@ -44,6 +36,7 @@ public class ClientInfo {
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
@@ -108,13 +101,23 @@ public class ClientInfo {
         this.relativePhone = relativePhone;
     }
 
-    public Integer getRelativeType() {
-        return relativeType;
+    public LocalDateTime getTime() {
+        return time;
     }
 
-    public void setRelativeType(Integer relativeType) {
-        this.relativeType = relativeType;
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 
+
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    private StatusEnum status;
 
 }

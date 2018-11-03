@@ -1,14 +1,20 @@
 package com.xjsoftware.com.info.manager;
 
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 
 public class CookieHelper {
+
 	static  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(CookieHelper.class);
+
 	public static String getCookie(HttpServletRequest request,String cookieName){
-		
+//		ServletRequestAttributes reqAttrs = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+//		HttpServletRequest request = reqAttrs.getRequest();
 		
 		Cookie[] cookies =  request.getCookies();
 		if(cookies != null){
@@ -20,7 +26,10 @@ public class CookieHelper {
 				}
 			}
 		}
-		
+		else {
+
+			logger.info("cookie value is null");
+		}
 		return null;
 	}
 	

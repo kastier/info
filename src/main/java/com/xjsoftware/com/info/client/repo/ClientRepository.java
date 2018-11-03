@@ -1,27 +1,36 @@
 package com.xjsoftware.com.info.client.repo;
 
 import com.xjsoftware.com.info.client.ClientInfo;
+import com.xjsoftware.com.info.client.enums.StatusEnum;
 import com.xjsoftware.com.info.client.repo.dao.ClientDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class ClientRepository {
 
     @Autowired
     ClientDao clientDao;
-    public Integer addClient(ClientInfo clientInfo)
+
+    public Integer setClient(ClientInfo clientInfo)
     {
-        return 0;
+
+        ClientInfo _info=new ClientInfo();
+        _info=clientDao.updateClientByPhoneNumber(clientInfo);
+        return _info.getId();
         
     }
-    public Integer addClientPhoneNumber (String phoneNumber)
+
+    public Integer addClientPhoneNumber (ClientInfo clientInfo)
     {
-        ClientInfo clientInfo=new ClientInfo ();
-        clientInfo.setPhoneNumber (phoneNumber);
-         clientDao.addClientPhoneNumber (clientInfo);
+      clientDao.addClientPhoneNumber (clientInfo);
          return clientInfo.getId ();
     }
-    
-    
+
+    public ClientInfo  getClientById(Integer id)
+    {
+        return clientDao.getClientById(id);
+    }
 }
