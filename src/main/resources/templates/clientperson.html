@@ -16,8 +16,8 @@
     <div class="imsg">
         <img src="/images/us2.png">
     </div>
-    <div class="spans" id="telephoneDiv">
-        130XXXX8888
+    <div class="spans" id="telephoneDiv" th:text="${phoneNumber}">
+        未能获取手机号
     </div>
 </div>
 
@@ -54,16 +54,13 @@
     function validate(){
         var _token=localStorage.getItem("token");
         var _telephone=localStorage.getItem("telephone");
-        if(!_token){
-            window.location.href="login_simple.html";
-            return;
-        }
+
         $("#telephoneDiv").html(_telephone);
     }
     function logout(){
         if(window.confirm("确认退出?")){
             localStorage.clear();
-            window.location.href="login_simple.html";
+            window.location.href="login";
         }else{
             return false;
         }

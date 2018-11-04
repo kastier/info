@@ -189,6 +189,7 @@
             $MessageBox.fail("提示","请输入您的关系人的手机号");
             return false;
         }
+        console.log("done submit");
 
         $.ajax({
             url: "/client/api/update",
@@ -199,14 +200,12 @@
             },
             contentType: "application/json",
             success: function (result) {
-                if(result.code===0){
-                    $MessageBox.fail("提示","申请成功，请稍后...");
-                    //window.location.href="index";
-                    location.reload();
-                }
+                $MessageBox.fail("提示","申请成功，请稍后...");
+                window.location.href="clientmain";
             },
             fail: function (result) {
                 console.log(result);
+                console.log("done but fail")
             }
 
         });

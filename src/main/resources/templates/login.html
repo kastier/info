@@ -223,11 +223,14 @@
         }
         $time=60;
         $.get("/validcode/api/send?phoneNumber="+_telephone,function(data,status){
+            console.log(data);
             if(data.code===500){
                 $("#errorMsg").html(data.msg);
                 $("#errorMsg").css("display","block");
                 //initCaptcha();
             }
+            $MessageBox.fail("提示",data.data);
+
             $timer=setInterval(function(){
                 $("#sendAuthCode").css("background","#8A8A8A");
                 $time--;

@@ -8,6 +8,7 @@ import com.xjsoftware.com.info.manager.CookieSet;
 import com.xjsoftware.com.info.service.IClientService;
 import com.xjsoftware.com.info.service.IValidCodeService;
 import com.xjsoftware.com.info.volobj.ApiResult;
+import com.xjsoftware.com.info.volobj.ValidCodeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,9 +36,9 @@ public class ValidCodeApi {
 	ApiResult apiResult=new ApiResult ();
 	try
 	{
-		Integer result=validCodeService.sendValidCode (phoneNumber).getStatus ().getValue ();
-		apiResult.setCode (result);
-		apiResult.setMsg ("success");
+		ValidCodeInfo result=validCodeService.sendValidCode (phoneNumber);
+		apiResult.setCode (result.getStatus().getValue());
+		apiResult.setData(result.getStatus().getDesc());
 		return apiResult;
 	}
 	catch (Exception exe)

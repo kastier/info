@@ -17,9 +17,9 @@ public class SMSService implements ISMSService {
     // 请登录zz.253.com 获取创蓝API账号(非登录账号,示例:N1234567)
     private static String account = "N4454036";
     // 请登录zz.253.com 获取创蓝API密码(非登录密码)
-    private static String pswd = "1231232";
+    private static String pswd = "l2UnHL7kRs7262";
 
-    private static String companyName="测试系统";
+    private static String companyName="253云通讯";
 
     private String smsSingleRequestServerUrl = "http://smssh1.253.com/msg/send/json";
     @Override

@@ -63,7 +63,22 @@ public class ClientController {
 	}
 
 	@RequestMapping(value = "clientperson")
-	public String getPersonal(){
+	public String getPersonal(Model model,HttpServletRequest request){
+		String idInCookie=CookieHelper.getCookie(request,CookieSet.getClientCookieName());
+		logger.info("id is null than from cookie:"+idInCookie);
+		if(idInCookie==null)
+		{
+			return "login";
+		}
+		Integer id=Integer.valueOf(idInCookie);
+		ClientInfo clientInfo=iClientService.getClientInfoById(id);
+
+		model.addAttribute("phoneNumber",clientInfo.getPhoneNumber());
 		return "clientperson";
+	}
+
+	@RequestMapping(value = "clientmain")
+	public String getMain(){
+		return "clientmain";
 	}
 }
