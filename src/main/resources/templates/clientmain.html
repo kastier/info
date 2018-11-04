@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="/css/swiper.min.css">
     <title>首页</title>
     <link href="/css/css.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
-    <script type="text/javascript" src="js/dialog.js"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script src="/js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/dialog.js"></script>
+    <script type="text/javascript" src="/js/utils.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/styles2.css">
     <link rel="stylesheet" type="text/css" href="/css/global.css">
     <link rel="stylesheet" type="text/css" href="/css/dialog.css">
@@ -29,9 +29,9 @@
    </div>-->
     <!-- Add Pagination -->
     <!--<div class="swiper-pagination"></div>-->
-    <img src="images/banner.png" style="height:160px;">
+    <img src="/images/banner.png" style="height:160px;">
 </div>
-<script src="js/swiper.min.js"></script>
+<script src="/js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: {
@@ -76,10 +76,10 @@
 <div class="foot">
     <ul>
         <li class="one hover">
-            <a href="client_request.html">借款</a>
+            <a href="index">借款</a>
         </li>
         <li class="three">
-            <a href="index.html">我的</a>
+            <a href="clientperson">我的</a>
         </li>
     </ul>
 </div>
@@ -100,10 +100,10 @@
         if($saveOrder===1){
             register();
         }
-
-        if(!$yysTaskId){
-            checkAuth();
-        }
+        //
+        // if(!$yysTaskId){
+        //     checkAuth();
+        // }
         styler();
     })
     function styler(){
@@ -122,6 +122,15 @@
             }
         }
         return theRequest;
+    }
+
+    function register() {
+
+    }
+
+    function register(){
+        $MessageBox.success("恭喜","恭喜您申请成功,请保持电话畅通,我们将在24小时内与您联系!",false)
+
     }
 </script>
 </body>

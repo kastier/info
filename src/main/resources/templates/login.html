@@ -197,22 +197,6 @@
             return false;
         }
 
-       // window.location.href="client_info_add.html";
-       //  $.ajax({
-       //      url: "/validcode/api/check/",
-       //      type: "post",
-       //      contentType : 'application/json',
-       //      dataType:"json",
-       //      data: JSON.stringify({
-       //          phoneNumber:_telephone,
-       //          validCode: _authCode
-       //      }),
-       //      fail: function (result) {
-       //          console.log(result);
-       //      }
-       //
-       //  });
-
         $.get("/validcode/api/check?phoneNumber="+_telephone+"&validCode="+_authCode,function(data,status){
             if(data.code===500){
                 $("#errorMsg").html(data.msg);

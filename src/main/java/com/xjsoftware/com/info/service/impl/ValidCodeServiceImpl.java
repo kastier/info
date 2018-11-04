@@ -3,6 +3,7 @@ package com.xjsoftware.com.info.service.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xjsoftware.com.info.manager.CacheKeys;
+import com.xjsoftware.com.info.service.ISMSService;
 import com.xjsoftware.com.info.service.IValidCodeService;
 import com.xjsoftware.com.info.volobj.ValidCodeInfo;
 import com.xjsoftware.com.info.volobj.enums.ValidCodeSentStatusEnum;
@@ -33,8 +34,9 @@ public class ValidCodeServiceImpl implements IValidCodeService {
 		this.objectMapper = objectMapper;
 	}
 	
-	
-	
+	@Autowired
+	ISMSService smsService;
+
 	private ObjectMapper objectMapper;
 	
 	private StringRedisTemplate redisTemplate;
@@ -98,6 +100,8 @@ public class ValidCodeServiceImpl implements IValidCodeService {
 				saveValidCodeInfo (validCodeInfo);
 				logger.info (validCode.toString ());
 				//smsHelper.sendMsg (phoneNumber,String.format ("您的验证码为:%s",validCode.toString ()));
+				String resultCode=smsService.sendSMS(phoneNumber,validCode.toString());
+				logger.info("sms code is : "+resultCode);
 			}
 	
 		

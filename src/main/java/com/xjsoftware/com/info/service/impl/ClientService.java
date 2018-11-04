@@ -40,4 +40,9 @@ public class ClientService  implements IClientService
 	{
 		return clientRepository.getClientById(id);
 	}
+
+	public Integer updateClientInfoByPhoneNumber(ClientInfo clientInfo)
+	{
+		return clientRepository.updateClientInfoByPhoneNumber(clientInfo);
+	}
 }

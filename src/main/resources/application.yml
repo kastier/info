@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 81
 info:
   name: ${spring.application.name}
   description: info-system

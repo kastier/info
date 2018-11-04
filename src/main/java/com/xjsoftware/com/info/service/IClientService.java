@@ -6,6 +6,7 @@ public interface IClientService {
 	Integer addClientPhoneNumber (String phoneNumber);
 	Integer setClientInfo(ClientInfo clientInfo);
 	ClientInfo getClientInfoByPhone(String phoneNumber);
+	Integer updateClientInfoByPhoneNumber(ClientInfo clientInfo);
 
 	ClientInfo getClientInfoById(Integer id);
 }

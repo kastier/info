@@ -1,11 +1,9 @@
 package com.xjsoftware.com.info.controller;
 
-import com.sun.istack.internal.Nullable;
 import com.xjsoftware.com.info.client.ClientInfo;
 import com.xjsoftware.com.info.client.enums.StatusEnum;
 import com.xjsoftware.com.info.manager.CookieHelper;
 import com.xjsoftware.com.info.manager.CookieSet;
-import com.xjsoftware.com.info.manager.IPHelper;
 import com.xjsoftware.com.info.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,16 +31,14 @@ public class ClientController {
 		if(id==null)
 		{
 			String idInCookie=CookieHelper.getCookie(request,CookieSet.getClientCookieName());
-			if(idInCookie!=null&& idInCookie.length()<=0)
+			logger.info("id is null than from cookie:"+idInCookie);
+			if(idInCookie==null)
 			{
-				id=Integer.valueOf(idInCookie);
+				return "login";
 			}
+			id=Integer.valueOf(idInCookie);
 		}
-		if(id==null)
-		{
-			return "login";
-		}
-
+		logger.info("curent id: "+String.valueOf(id));
 
 		CookieHelper.writeCookie (res, CookieSet.getClientCookieName(),id.toString ());
 
@@ -54,7 +50,7 @@ public class ClientController {
 		}
 		else
 		{
-			return "index";
+			return "clientmain";
 		}
 	}
 	
@@ -64,5 +60,10 @@ public class ClientController {
 		//String result=CookieHelper.getCookie(request, CookieSet.getClientCookieName());
 
 		return "login";
+	}
+
+	@RequestMapping(value = "clientperson")
+	public String getPersonal(){
+		return "clientperson";
 	}
 }

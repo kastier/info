@@ -33,7 +33,9 @@
                     <div  class="left-name"><span >*</span>姓名</div>
                 </div>
                 <div class="yd-cell-right le">
-                    <p th:text="${phoneNumber}">未能获取手机号</p>                </div>
+                    <p th:text="${phoneNumber}">未能获取手机号</p>
+                </div>
+                <input th:type="hidden" th:value="${phoneNumber}" id="phoneNumber" />
                 <div class="clr"></div>
             </div>
 
@@ -132,7 +134,7 @@
     })
     function validate(){
         var _token=localStorage.getItem("token");
-        var _telephone=localStorage.getItem("telephone");
+        //var _telephone=localStorage.getItem("telephone");
         $token=_token;
         $telephone=_telephone;
         if(!_token){
@@ -147,6 +149,7 @@
         var _relativeType=$("#relativeType").val();
         var _relativeName=$("#relativeName").val();
         var _relativePhone=$("#relativePhone").val();
+        var _phoneNumber=$("#phoneNumber").val();
         var _request={
             "name":_name,
             "job":_job,
@@ -154,41 +157,38 @@
             "creaditScore":_creaditScore,
             "relativeType":_relativeType,
             "relativeName":_relativeName,
-            "relativePhone":_relativePhone
+            "relativePhone":_relativePhone,
+            "phoneNumber":_phoneNumber
         }
 
-        console.log(_request);
-        // if(!_age){
-        //     $MessageBox.fail("提示","请输入您的年龄");
-        //     return false;
-        // }
-        // if(!_creditNumber){
-        //     $MessageBox.fail("提示","请输入您的芝麻分");
-        //     return false;
-        // }
-        // if(!_identityId){
-        //     $MessageBox.fail("提示","请输入您的身份证");
-        //     return false;
-        // }
-        // if(!_location){
-        //     $MessageBox.fail("提示","请选择所在地");
-        //     return false;
-        // }
+        if(!_name)
+        {
+            $MessageBox.fail("提示","请输入您的名字");
+            return false;
+        }
 
-        // if(_age && (_age>42 || _age<23)){
-        //     $MessageBox.fail("提示","年龄不符合要求");
-        //     return false;
-        // }
-        // if(_creditNumber<580){
-        //     $MessageBox.fail("提示","芝麻分太低不能注册");
-        //     return false;
-        // }
-        // if(_creditNumber>900){
-        //     $MessageBox.fail("提示","请输入正确的芝麻分");
-        //     return false;
-        // }
+        var regIdNo = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+        if(!_idCode||!regIdNo.test(_idCode))
+        {
+            $MessageBox.fail("提示","请输入正确的身份证号");
+            return false;
+        }
+        if(!_creaditScore)
+        {
+            $MessageBox.fail("提示","请输入您的芝麻分");
+            return false;
+        }
 
-        //window.location.href="client_request.html";
+        if(!_relativeName)
+        {
+            $MessageBox.fail("提示","请输入您的关系人的姓名");
+            return false;
+        }
+        if(!_relativePhone)
+        {
+            $MessageBox.fail("提示","请输入您的关系人的手机号");
+            return false;
+        }
 
         $.ajax({
             url: "/client/api/update",
@@ -200,7 +200,9 @@
             contentType: "application/json",
             success: function (result) {
                 if(result.code===0){
-                    //window.location.href="https://open.shujumohe.com/box/tb?box_token=DFF80E0DCA53486BB92D7FA123F80206&cb=https://program.passlight.cn/importData/success.html";
+                    $MessageBox.fail("提示","申请成功，请稍后...");
+                    //window.location.href="index";
+                    location.reload();
                 }
             },
             fail: function (result) {

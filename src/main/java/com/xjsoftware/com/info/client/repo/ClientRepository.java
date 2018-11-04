@@ -13,15 +13,15 @@ public class ClientRepository {
 
     @Autowired
     ClientDao clientDao;
-
-    public Integer setClient(ClientInfo clientInfo)
-    {
-
-        ClientInfo _info=new ClientInfo();
-        _info=clientDao.updateClientByPhoneNumber(clientInfo);
-        return _info.getId();
-        
-    }
+//
+//    public Integer setClient(ClientInfo clientInfo)
+//    {
+//
+//        ClientInfo _info=new ClientInfo();
+//        _info=clientDao.updateClientByPhoneNumber(clientInfo);
+//        return _info.getId();
+//
+//    }
 
     public Integer addClientPhoneNumber (ClientInfo clientInfo)
     {
@@ -32,5 +32,10 @@ public class ClientRepository {
     public ClientInfo  getClientById(Integer id)
     {
         return clientDao.getClientById(id);
+    }
+
+    public Integer updateClientInfoByPhoneNumber(ClientInfo clientInfo)
+    {
+        return clientDao.updateClientInfoByPhoneNumber(clientInfo);
     }
 }
